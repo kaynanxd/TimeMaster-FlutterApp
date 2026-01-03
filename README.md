@@ -1,16 +1,45 @@
-# flutter_application_1
+# ⏳ Time Master - O Teu Gestor de Tempo Definitivo
 
-A new Flutter project.
+O **Time Master** é uma aplicação completa de gestão de tempo desenvolvida em Flutter, focada em produtividade, foco e treino físico. Com uma interface moderna em Dark Mode, a aplicação oferece quatro ferramentas essenciais num único lugar.
 
-## Getting Started
+## 🚀 Funcionalidades
 
-This project is a starting point for a Flutter application.
+### ⏱️ Cronómetro
+Contagem progressiva simples e precisa para medir qualquer atividade.
 
-A few resources to get you started if this is your first Flutter project:
+### ⏲️ Temporizador
+Configuração rápida de contagem regressiva com alerta sonoro ao finalizar.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 🍅 Método Pomodoro
+Foca-te nas tuas tarefas com ciclos personalizáveis de **Trabalho** e **Pausa**.
+- Alternância automática entre estados.
+- Início automático do próximo ciclo.
+- Avisos sonoros integrados.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 🔥 Treino HIIT (Intervalado)
+Leva os teus treinos ao próximo nível com o sistema de **Séries**.
+- Configura tempo de Ação, Descanso e número de Rounds.
+- Indicadores visuais claros para cada fase.
+- Alerta sonoro em cada transição.
+
+---
+
+## 📸 Screenshots
+
+Aqui podes ver a interface da aplicação em funcionamento:
+
+| Home | Pomodoro | Treino HIIT |
+| :---: | :---: | :---: |
+| <img src="screenshots/home.png" width="200"> | <img src="screenshots/pomodoro.png" width="200"> | <img src="screenshots/hiit.png" width="200"> |
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Flutter / Dart**
+- **Arquitetura MVC** (Model-View-Controller) para código limpo.
+- **Layout Adaptável**: Compatível com diferentes tamanhos de ecrã.
+
+## ⚙️ Como Executar o Projeto
+
+1. **va em releases - baixe o apk e instale em seu android **
