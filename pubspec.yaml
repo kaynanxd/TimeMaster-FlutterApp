@@ -32,7 +32,6 @@ dependencies:
     sdk: flutter
   audioplayers: ^5.2.1
   flutter_launcher_icons: ^0.13.1
-  wakelock_plus: ^1.4.0
 
 flutter_launcher_icons:
   android: "launcher_icon"

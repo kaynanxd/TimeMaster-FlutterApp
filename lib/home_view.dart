@@ -78,8 +78,6 @@ class HomeView extends StatelessWidget {
       ),
     );
   }
-
-  // Função auxiliar para não repetir código de estilo
   Widget _buildMenuCard(
     BuildContext context, {
     required String title,
@@ -87,12 +85,11 @@ class HomeView extends StatelessWidget {
     required Color color,
     required Widget destination,
   }) {
-    // Media Query para garantir que o quadrado se ajuste a telas diferentes
     final double size = MediaQuery.of(context).size.width * 0.4; 
 
     return InkWell(
       onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => destination)),
-      borderRadius: BorderRadius.circular(25), // Borda arredondada no clique
+      borderRadius: BorderRadius.circular(25), 
       child: Container(
         width: size,
         height: size,
