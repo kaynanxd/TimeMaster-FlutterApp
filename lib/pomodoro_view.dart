@@ -114,9 +114,19 @@ class _PomodoroViewState extends State<PomodoroView> {
               ? controller.parar()
               : controller.iniciarTemporizador(),
           style: ElevatedButton.styleFrom(
-            backgroundColor: isFoco ? Colors.redAccent : Colors.green,
+            backgroundColor: isFoco ? const Color.fromARGB(255, 118, 255, 125) : Colors.lightBlue,
           ),
           child: Text(controller.model.estaRodando ? "Pausar" : "Iniciar"),
+        ),
+        const SizedBox(width: 10),
+        ElevatedButton(
+          onPressed: () => controller.adicionar30Segundos(),
+          child: const Text("+30s"),
+        ),
+        const SizedBox(width: 10),
+        ElevatedButton(
+          onPressed: () => controller.zerar(),
+          child: const Text("Reset"),
         ),
         const SizedBox(width: 10),
         ElevatedButton(

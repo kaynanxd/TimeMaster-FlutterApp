@@ -17,6 +17,9 @@ class _TemporizadorViewState extends State<TemporizadorView> {
   @override
   void initState() {
     super.initState();
+
+    _segundos = 60;
+    controller.setTempo(Duration(seconds: 60));
     
     controller.onUpdate = () {
       if (mounted) {
@@ -80,18 +83,25 @@ class _TemporizadorViewState extends State<TemporizadorView> {
           onPressed: () => controller.model.estaRodando 
               ? controller.parar() 
               : controller.iniciarTemporizador(),
+            style: ElevatedButton.styleFrom(
+            backgroundColor: controller.model.estaRodando ? Colors.greenAccent : null, 
+          ),
           child: Text(controller.model.estaRodando ? "Pausar" : "Iniciar"),
         ),
         const SizedBox(width: 10),
         ElevatedButton(
           onPressed: () {
-            controller.resetar();
+            controller.zerar();
             setState(() => _segundos = 0);
           }, 
           child: const Text("Reset")
         ),
         const SizedBox(width: 10),
         ElevatedButton(
+          onPressed: () => controller.adicionar30Segundos(), 
+          child: const Text("+30s")
+        ),const SizedBox(width: 10),
+                ElevatedButton(
           onPressed: () => Navigator.pop(context), 
           child: const Text("Home")
         ),

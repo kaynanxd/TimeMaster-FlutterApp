@@ -49,6 +49,11 @@ class CronometroController {
     onUpdate?.call();
   }
 
+  void zerar() {
+    model.duracao = Duration.zero;
+    onUpdate?.call();
+  }
+
   void setTempo(Duration novaDuracao) {
     model.duracao = novaDuracao;
     onUpdate?.call();

@@ -44,7 +44,7 @@ class _CronometroViewState extends State<CronometroView> {
               ? controller.parar() 
               : controller.iniciarCronometro(),
           style: ElevatedButton.styleFrom(
-            backgroundColor: controller.model.estaRodando ? Colors.orange : null, 
+            backgroundColor: controller.model.estaRodando ? Colors.greenAccent : null, 
           ),
           child: Text(controller.model.estaRodando ? "Pausar" : "Iniciar"),
         ),

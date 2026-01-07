@@ -15,8 +15,8 @@ class _TreinoViewState extends State<TreinoView> {
   final AudioPlayer _audioPlayer = AudioPlayer(); 
 
   double _tempoAcao = 30;    
-  double _tempoDescanso = 10; 
-  double _totalSeries = 5;    
+  double _tempoDescanso = 60; 
+  double _totalSeries = 4;    
   
   int _serieAtual = 1;
   bool _estaEmAcao = true; 
@@ -126,7 +126,7 @@ class _TreinoViewState extends State<TreinoView> {
           _buildAjusteCard(
             label: "Tempo de Ação",
             valor: _tempoAcao,
-            min: 5, max: 120,
+            min: 5, max: 180,
             cor: Colors.orangeAccent,
             onChanged: (v) {
               setState(() {
@@ -138,7 +138,7 @@ class _TreinoViewState extends State<TreinoView> {
           _buildAjusteCard(
             label: "Tempo de Descanso",
             valor: _tempoDescanso,
-            min: 5, max: 60,
+            min: 5, max: 180,
             cor: Colors.blueAccent,
             onChanged: (v) {
               setState(() {
@@ -173,13 +173,23 @@ class _TreinoViewState extends State<TreinoView> {
                 : controller.iniciarTemporizador();
           },
           style: ElevatedButton.styleFrom(
-            backgroundColor: _estaEmAcao ? Colors.orange : Colors.blue,
-            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+            backgroundColor: _estaEmAcao ? Colors.greenAccent : Colors.blue,
+
           ),
           child: Text(
-            controller.model.estaRodando ? "Pausar" : "Iniciar Treino",
+            controller.model.estaRodando ? "Pausar" : "Iniciar",
             style: const TextStyle(fontSize: 18),
           ),
+        ),
+        const SizedBox(width: 15),
+        ElevatedButton(
+          onPressed: () => controller.adicionar30Segundos(), 
+          child: const Text("+30s"),
+        ),
+        const SizedBox(width: 15),
+        ElevatedButton(
+          onPressed: () => controller.zerar(), 
+          child: const Text("Reset"),
         ),
         const SizedBox(width: 15),
         ElevatedButton(
